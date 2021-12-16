@@ -1,0 +1,121 @@
+{
+	"id": "80792ac8-24b9-4e87-b0ec-4d62bfa3c433",
+	"name": "Pet",
+	"timestamp": "2021-12-16T04:06:10.737Z",
+	"collection_id": "17228415-7e3cddbd-07cb-4b03-8534-ca16bf8bad56",
+	"folder_id": 0,
+	"environment_id": "6fbe2444-dbf6-4b91-963a-25b7dc3d5089",
+	"totalPass": 2,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "08326997-a9d8-410c-87c8-6319d2a492f7",
+			"name": "Create New Pet",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 239,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				239
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "c16a855f-a3d3-472e-92f0-ec6bd1a1633f",
+			"name": "Get single pet",
+			"url": "https://petstore.swagger.io/v2/pet/1",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				241
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ccc3ecbb-00fd-431b-bff3-db76db23d148",
+			"name": "Update pet",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 235,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				235
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ed975e5e-f265-4530-9849-62809bfbe403",
+			"name": "Delete Pet",
+			"url": "https://petstore.swagger.io/v2/pet/2",
+			"time": 250,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				250
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 965,
+	"collection": {
+		"requests": [
+			{
+				"id": "08326997-a9d8-410c-87c8-6319d2a492f7",
+				"method": "POST"
+			},
+			{
+				"id": "c16a855f-a3d3-472e-92f0-ec6bd1a1633f",
+				"method": "GET"
+			},
+			{
+				"id": "ccc3ecbb-00fd-431b-bff3-db76db23d148",
+				"method": "PUT"
+			},
+			{
+				"id": "ed975e5e-f265-4530-9849-62809bfbe403",
+				"method": "DELETE"
+			}
+		]
+	}
+}
