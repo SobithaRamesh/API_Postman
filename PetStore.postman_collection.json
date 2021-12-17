@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e9c960b5-942d-4af0-9f7d-793e80bcef5c",
-		"name": "Pet Store",
+		"name": "PetStore",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,10 +15,7 @@
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"placed\");\r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -29,7 +26,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 1,\r\n  \"petId\": 1,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2021-12-14T21:30:08.296Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"petId\": 1,\r\n  \"quantity\": 2,\r\n  \"shipDate\": \"2021-12-17T00:20:08.371Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,13 +34,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{Protocol}}//{{host}}/v2/store/order",
+					"raw": "https://petstore.swagger.io/v2/store/order",
+					"protocol": "https",
 					"host": [
-						"{{Protocol}}"
+						"petstore",
+						"swagger",
+						"io"
 					],
 					"path": [
-						"",
-						"{{host}}",
 						"v2",
 						"store",
 						"order"
@@ -54,6 +52,19 @@
 		},
 		{
 			"name": "Get single order of a pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -77,21 +88,35 @@
 		},
 		{
 			"name": "Delete order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{Protocol}}//{{host}}/v2/store/order/2",
+					"raw": "https://petstore.swagger.io/v2/store/order/1",
+					"protocol": "https",
 					"host": [
-						"{{Protocol}}"
+						"petstore",
+						"swagger",
+						"io"
 					],
 					"path": [
-						"",
-						"{{host}}",
 						"v2",
 						"store",
 						"order",
-						"2"
+						"1"
 					]
 				}
 			},
