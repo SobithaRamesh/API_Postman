@@ -1,0 +1,122 @@
+C:\Users\sobis\Desktop\Internship\Postman>newman run Pet.postman_collection.json
+newman
+
+Pet
+
+→ Create New Pet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 453B, 1511ms]
+  √  Status code is 200
+  √  Body matches string
+
+→ Get single pet
+  GET https://petstore.swagger.io/v2/pet/1 [200 OK, 513B, 420ms]
+
+→ Update pet
+  PUT https://petstore.swagger.io/v2/pet [200 OK, 452B, 282ms]
+
+→ Delete Pet
+  DELETE https://petstore.swagger.io/v2/pet/2 [404 Not Found, 292B, 654ms]
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   4 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   2 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   2 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 3.3s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 440B (approx)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 716ms [min: 282ms, max: 1511ms, s.d.: 477ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+
+
+C:\Users\sobis\Desktop\Internship\Postman>newman run PetStore.postman_collection.json
+newman
+
+PetStore
+
+→ Place an order of a pet
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 433B, 1191ms]
+  √  Status code is 200
+
+→ Get single order of a pet
+  GET https://petstore.swagger.io/v2/store/order/1 [200 OK, 433B, 222ms]
+  √  Status code is 200
+
+→ Delete order
+  DELETE https://petstore.swagger.io/v2/store/order/1 [200 OK, 369B, 220ms]
+  √  Status code is 200
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   3 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   3 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   3 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 2s                                              │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 257B (approx)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 544ms [min: 220ms, max: 1191ms, s.d.: 457ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+
+
+
+C:\Users\sobis\Desktop\Internship\Postman>newman run User.postman_collection.json
+newman
+
+User
+
+→ Create user
+  POST https://petstore.swagger.io/v2/user/createWithArray [200 OK, 370B, 1411ms]
+  √  Status code is 200
+
+→ Get details of single user
+  GET https://petstore.swagger.io/v2/user/Sobi [404 Not Found, 385B, 295ms]
+
+→ Update user
+  PUT https://petstore.swagger.io/v2/user/Risu [200 OK, 369B, 292ms]
+
+→ New Request
+  DELETE https://petstore.swagger.io/v2/user/guru [404 Not Found, 292B, 317ms]
+
+→ Logs user into the system
+  GET https://petstore.swagger.io/v2/user/login?username=sobiR%40gmail.com&password=ssss [200 OK, 471B, 242ms]
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   5 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   1 │                   0 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 3.1s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 217B (approx)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 511ms [min: 242ms, max: 1411ms, s.d.: 450ms] │
+└─────────────────────────────────────────────────────────────────────┘
